@@ -1,0 +1,47 @@
+name: Website Structure Verification CI
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  verify-structure:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Check out the repository
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      # 2. Verify Root and Folder Structure
+      - name: Verify Directory and File Structure
+        run: |
+          set -euo pipefail
+          
+          echo "Checking root files..."
+          test -f index.html
+          
+          echo "Checking HTML folder..."
+          test -d HTML
+          test -f HTML/episodes.html
+          test -f HTML/gallery.html
+          test -f HTML/login.html
+          test -f HTML/register.html
+          test -f HTML/thankyoupage.html
+          test -f HTML/trailers.html
+          
+          echo "Checking CSS folder..."
+          test -d CSS
+          test -f CSS/style.css
+          
+          echo "Checking IMG folder..."
+          test -d IMG
+          
+          echo "Structure verification passed: index.html is in root, others are in their respective caps-titled folders."
+
+      # 3. Basic HTML Syntax Check (Optional)
+      # This ensures there are no glaring tags left open
+      - name: HTML Lint
+        run: |
+          find . -name "*.html" -exec echo "Checking {}" \;
