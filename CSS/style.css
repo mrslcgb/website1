@@ -1,0 +1,788 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  padding: 10px;
+  background: #7393B3; /*Blue Gray */
+
+}
+
+/* All pages used for the website was styled using W3Schools CSS Website Layout for its general structure.*/
+
+/*HOME PAGE... */
+
+
+
+.header, .header2, .header3, .header4, .header5, .header6, .header7{
+  padding: 180px;
+  text-align: center;
+  background: white;
+  background-image: url('../IMG/m.gif');
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  color: #fff;
+       
+}
+
+
+
+.header h1, .header2 h1, .header3 h1, .header4 h1, .header5 h1, .header6 h1, .header7 h1{
+  font-size: 70px;
+    transition: 0.5s;
+
+}
+
+/* the design for this came from the Youtuber called "GreatStack". */
+.header h1:hover{
+     -webkit-text-stroke: 2px #62C3F8; /* Sky Blue */
+    color: transparent;
+    
+}
+
+
+/*The code for the navigation bar came from the Youtuber called "Skillthrive". . I edited it to fit my desired look */
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 4%;
+    background: gray;
+}
+
+.navigation img {
+    width: 70px;
+}
+
+
+.logo {
+    cursor: pointer;
+}
+   
+.topnav2 {
+    list-style: none;
+}
+
+.topnav2 li {
+    display: inline-block;
+    padding: 0 10px;
+}
+
+.topnav2 li a {
+    font-weight: 500;
+    font-size: 16px;
+    color: #edf0f1; /* a light gray color */
+    text-decoration: none;
+    transition: all 0.3s ease 0s;
+}
+
+.topnav2 li a:hover {
+    color: white;
+    font-weight: 700;
+    
+}
+
+
+
+/*The code for the hero-btn and cast-btn came from the Youtuber "GreatStack". Video link:"https://youtu.be/oYRda7UtuhA?si=7XzeFn5dvvnvW89A". I edited it to fight my desired design */
+
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff; /*white */
+    border: 1px solid #fff; /*white */
+    border-radius: 100px;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    text-transform: uppercase;
+    position: relative;
+    cursor: pointer;
+}
+
+.hero-btn:hover{
+    border: 1px solid #191970; /* Midnight Blue */
+    color: #000;
+    background: rgb(70, 130, 180); /* Steel Blue */
+    box-shadow: 0 5px 15px rgba(70, 130, 180, .4);  /* Steel Blue */    
+    transition: 0.5s;
+}
+
+
+
+.left-col {   
+  float: left;
+  width: 100%;
+
+}
+
+
+
+
+.about-info ,.cast-p, .cast-d, .content, .gallery9{
+  border: 1px solid #ccc; /*Gray80 */
+    margin-bottom: 20px; 
+}
+
+.about-info, .cast-d:hover {
+  border: 1px solid #777; /*Gray */
+}
+
+
+
+/* This cam from W3Schools: "CSS Image Gallery" */
+
+.desc, .desc2 {
+   padding: 15px;  
+  text-align: center;
+    background: #FBE9B5; /*whitesmoke */
+  
+}
+
+
+
+.about-col,.cast-col {
+  padding: 0 6px;
+  float: left;
+  width: 33.33%;
+}
+
+
+
+
+.cast-col {
+    
+     width: 20%;
+    
+}
+
+
+
+.cast-d, .content{ 
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+    background: #DBE8FF; /*kind of a pastel shade of blue */
+    padding: 25px;
+    cursor: pointer;
+    display: flex; 
+    
+    
+
+    
+} 
+
+
+
+.cast-d img {
+    height: 40px;
+    margin-left: 5px;
+    margin-right: 30px;
+    border-radius: 50%;
+}
+
+.cast-d p{
+    padding: 0;
+}
+
+.cast-d h3 {
+    margin-top: 15px;
+    text-align: left;
+}
+
+
+
+.cast-p {
+  
+    border-radius: 18px;
+    margin-bottom: 10px;
+    overflow: hidden; 
+
+}
+
+
+
+/*Code from the W3schools website: "Fade in Overlay" to make the efect with the blue tint and the charter names appearing */
+.container {
+  position: relative;
+    
+  
+}
+
+
+
+.image {
+  display: block;
+  width: 100%;   
+
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background: rgba(137, 207, 240,0.7);/* baby blue */
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
+
+
+/* the @media from the W3schools website: "CSS Image Gallery" but I added extra into it as I went along */
+
+@media only screen and (max-width: 700px) {
+  .about-col, .cast-col{
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+      .cast-d{
+        display: inherit;
+    } 
+
+    .content {
+        display: inherit;
+        
+
+}
+    
+
+
+
+
+    
+}
+
+@media only screen and (max-width: 500px) {
+  .about-col, .cast-col{
+    width: 100%;
+  }
+
+
+
+
+    
+}
+
+
+
+
+/*This also came from W3Scools topic on "CSS Image Gallary */
+
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+
+
+.about-info:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+    
+    
+}
+
+
+
+.about, .castsection, .cast-info, .episodes, .trailers, .gallery-section, .footer-section, .lr{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background: #fff;
+}
+
+
+
+.about a{
+    text-decoration: none;
+    color: #006994; 
+}
+
+h2{
+    font-size: 36px;
+    font-weight: 600;
+}
+
+
+
+p{
+     color: #777; 
+    
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+    
+    
+}
+
+/* Design for .cast-btn From "GreatStack". */
+
+.cast-btn{
+    display: inline-block; 
+    text-decoration: none;
+    color: gray;
+    border: 1px solid gray;
+    border-radius: 100px;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    text-transform: uppercase;
+     margin-bottom: 25px;
+    position: relative;
+    cursor: pointer;
+}
+
+
+.cast-btn:hover{
+    border: 1px solid #191970;
+    color: #000;
+    background: rgb(70, 130, 180); /* Steel Blue */
+    box-shadow: 0 5px 15px rgba(70, 130, 180, .4);  /* Steel Blue */ 
+    transition: 0.5s;
+
+} 
+
+
+
+.right-col {
+  float: left;
+  width: 100%;
+
+}
+
+
+
+.left-col img {
+    height: auto;
+    width: 100%;
+    
+}
+
+
+
+h2 {
+    font-size: 30px;
+}
+
+
+.card {
+  background-color: white;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+
+address a {
+    text-decoration: none;
+    color: #283755; /* midnight blue */
+}
+
+address a:hover{
+    color: #727EA1; /* dull slate blue */
+}
+
+
+
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.footer-section{
+    
+   width: 100%;
+    background: #E5E4E2;
+    margin-top: 20px;
+    
+} 
+
+
+
+.footer-section a {
+    text-decoration: none;
+    color: #545454;
+}
+
+
+@media screen and (max-width: 800px) {
+  .left-col, .right-col {   
+    width: 100%;
+    padding: 0;
+    
+  }
+    
+
+    h2{
+        font-size: 20px;
+    }
+
+    .header h1, .header2 h1, .header3 h1, .header4 h1, .header5 h1, .header6 h1, .header7 h1{
+        font-size: 20px;
+    }
+
+    .header h2{ 
+            font-size: 10px;
+
+              }
+    
+        .header {
+  padding: 100px;
+
+            }
+   
+    .about-col{
+    flex-basis: auto;
+   
+   
+    
+
+}
+    .topnav2 li a {
+    
+    font-size: 10px;
+
+        }
+
+    .navigation img {
+    width: 40px;
+}
+
+    .hero-btn{
+    font-size: 10px;
+    
+}
+
+   
+
+
+.register-box{
+    width: 100px;
+    height: 100px;
+    }
+
+
+     .content {
+         width: 100%;
+     }
+}
+
+
+/*SEASON 1 ... */
+
+.content-box {
+    
+     width: 100%;
+    
+    
+}
+
+.content-box img{
+    
+    width: 50%;
+    margin-left: 5px;
+    margin-right: 30px;
+}
+
+.header2, .header3{
+    padding: 100px;
+    background-image: url('../IMG/scarybuggy.gif');
+}
+
+
+
+.content-box a{
+    color: #8A9A5B; /*moss green */
+    border: 1px solid #8A9A5B; /* moss green */
+ 
+}
+
+/*This code cam from W3Schools topic on "CSS Tables */
+.cast-table{
+    width: 70%;
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 50px; 
+    
+}
+
+#cast{
+    border-collapse: collapse;
+    width: 100%;
+
+}
+
+#cast td, #cast th {
+    border: 1px solid #ddd; /*very light shade of gray */
+  padding: 8px;
+}
+
+#cast tr:nth-child(even){
+    background-color: #f2f2f2; /*Gray95 */
+
+}
+
+#cast tr:hover {
+    
+    background-color: #ddd; /*very light shade of gray */
+                             
+}
+
+#cast th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  color: white;
+  background: #587190; /*a blue green color */
+}
+
+
+/* TRAILERS ... */
+
+.header3, .header4, .header5, .header6{
+    padding: 100px;
+    background-image: url('../IMG/lm.gif');
+}
+
+
+
+
+
+.content video {
+
+    width: 40%;
+    margin-left: 5px;
+    margin-right: 30px;
+}
+
+
+
+
+
+/*Gallery*/
+
+/*Also cam from W3Schools topic on CSS Image Gallery */
+.header4 {
+    background-image: url('../IMG/please.gif');
+}
+
+
+.gallery {
+  border: 1px solid #ccc;
+}
+
+.gallery:hover {
+  border: 1px solid #777;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+.desc2 {
+  padding: 15px;
+  text-align: center;
+}
+
+
+.desc2 {
+    background: #ADD8E6; /*light blue */
+
+    }
+
+.desc2:hover {
+    background: #6F8FAF; /*Denim*/
+    color: white;
+    font-weight: 700;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+    margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+
+/* Login */
+
+.header5{
+   
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), #3551b5), url('../IMG/f.gif'); /*transparent black with blue*/
+}
+
+/*Register */
+
+.header6{
+   
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), #3551b5), url('../IMG/thanks.gif'); /*transparent black with blue*/
+}
+
+
+
+/* LOGIN AND REGISTER */
+
+/*The code for the form came from the W3Schools website topic on "Responsive Form". I added my own form data to it after */
+
+ input[type=text], input[type=email],input[type=password],input[type=date], Select, .check{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+
+label{
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit],input[type=reset]{
+  background: rgb(70, 130, 180); /* Steel Blue */
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+  
+}
+
+input[type=submit]:hover {
+    background-color: #ADD8E6 /*light blue */
+}
+
+
+input[type=reset]:hover {
+  background-color: #ADD8E6 /*light blue */
+}
+
+
+input[type=submit],input[type=reset]{
+    margin: 10px;
+
+       
+    }
+
+
+/*I made this div in order to smallen then background of the forms */
+
+.lr {
+    width: 70%;
+    
+}
+
+.container2 {
+  border-radius: 5px;
+  background-color: #f2f2f2; /*Gray95 */
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75,Select  {
+    width: 100%;
+    margin-top: 0;
+  }
+
+    input[type=submit],input[type=reset]{
+    margin-top: 30px;
+
+       
+    }
+  
+}
+
+
+
+/* THANK YOU Page */
+
+.header7{
+    padding: 180px;
+    background-image: url('../IMG/happy.gif');
+
+}
+
+.header7 p {
+
+    font-size: 30px;
+    color: white;
+    font-weight: 700;
+    
+}
+
+
+.header7 h2 {
+
+          font-size: 20px;
+         
+          
+      }
